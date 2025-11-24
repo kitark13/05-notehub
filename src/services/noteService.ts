@@ -29,14 +29,14 @@ export async function fetchNotes({
 }
 
 export async function createNote(note: NewNote): Promise<Note> {
-  const response = await axios.post(`${BASE_URL}/notes`, note, {
+  const response = await axios.post<Note>(`${BASE_URL}/notes`, note, {
     headers: { Authorization: `Bearer ${token}` },
   });
   return response.data;
 }
 
 export async function deleteNote(id: string): Promise<Note> {
-  const response = await axios.delete(`${BASE_URL}/notes/${id}`, {
+  const response = await axios.delete<Note>(`${BASE_URL}/notes/${id}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
   return response.data;

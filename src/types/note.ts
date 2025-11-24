@@ -2,11 +2,11 @@ export type NoteTag = "Work" | "Personal" | "Meeting" | "Shopping" | "Todo";
 
 export interface Note {
   content: string;
-  craetedAt: string;
+  createdAt: string;
   id: string;
   tag: NoteTag;
   title: string;
-  updateAt: string;
+  updatedAt: string;
 }
 
 export interface NewNote {

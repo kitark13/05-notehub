@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import "./App.css";
 import css from "./App.module.css";
 import { fetchNotes } from "../../services/noteService";
@@ -25,6 +25,7 @@ function App() {
   const { data, isLoading } = useQuery<FetchNotesResponse>({
     queryKey: ["notes", page, debouncedSearch],
     queryFn: () => fetchNotes({ search: debouncedSearch, page, perPage: 12 }),
+    placeholderData: keepPreviousData,
   });
 
   const notes = data?.notes ?? [];
