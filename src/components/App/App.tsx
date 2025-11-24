@@ -8,7 +8,7 @@ import NoteList from "../NoteList/NoteList";
 import Pagination from "../Pagination/Pagination";
 import Modal from "../Modal/Modal";
 import NoteForm from "../NoteForm/NoteForm";
-import SearchBox from "../../SearchBox/SearchBox";
+import SearchBox from "../SearchBox/SearchBox";
 import { useDebounce } from "use-debounce";
 
 function App() {
