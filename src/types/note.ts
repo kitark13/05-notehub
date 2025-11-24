@@ -9,7 +9,7 @@ export interface Note {
   updateAt: string;
 }
 
-export interface NewTag {
+export interface NewNote {
   title: string;
   content?: string;
   tag: NoteTag;
